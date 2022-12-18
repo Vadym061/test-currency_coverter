@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+$bg-color: #FFEECC;
+$dot-color: #E5D5B7;
+$dot-size: 2px;
+$dot-space: 10px;
+body {
+  background: linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center, linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+  $dot-color;
+background-size: $dot-space $dot-space;
+background-position: center 0;
+animation: grid 1s linear infinite;
+}
+@keyframes grid {
+  to {
+      background-position:center -10px
+  }
+}
+* {
+  font-family: 'Inter', system-ui !important;
+  box-sizing: border-box;
+  user-select: none;
+  margin: 0;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+  width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+}
+.list{
+  &__item{
+    list-style: none;
+  }
+}
